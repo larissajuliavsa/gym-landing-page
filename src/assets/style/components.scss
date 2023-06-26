@@ -1,10 +1,21 @@
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 8vh;
-  gap: 1rem;
-  padding: 1.875rem 0;
+  background-color: #F8F8F8;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  border: 1px solid black;
+  
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 8vh;
+    gap: 1rem;    
+
+  width: 80%;
+  margin: 1.875rem auto;
+  
+  }
 
   &__links {
     display: flex;
@@ -40,13 +51,15 @@
   height: 35.3125rem;
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
+  
+  &__content {    
+    padding: 2rem;
+  }
+  
   &__title {
     color: #242424;
-    font-size: 2.5rem;
-    font-family: Inter;
-    font-weight: 700;
-    letter-spacing: 0.1125rem;
+    margin-bottom: 0.8rem;
   }
 
   &__subtitle {
@@ -55,21 +68,43 @@
     font-family: Inter;
     font-weight: 700;
     letter-spacing: 0.13rem;
+    margin-bottom: 2.5rem;
   }
 }
 
-.burger {
-  display: none;
-  cursor: pointer;
+.about {
+  display: flex;
+  background-color: #E2211C;
+  color: #F8F8F8;
 
-  & div {
-    width: 25px;
-    height: 2px;
-    margin: 5px;
-    background-color: #E2211C;
-    transition: all 0.4s ease-in;
+  &__content {
+    padding: 5.44rem 3rem;
+  }
+  
+  &__text {
+    max-width: 78rem;
+    text-align: justify;
+  }
+  
+  &__title {
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+  }
+  
+  &__p {
+    margin-bottom: 1.62rem;
+    line-height: 1.625rem;
+    letter-spacing: 0.025rem;
+  }
+
+  &__image {
+    display: inline;
+    background: url("../images/about.svg") no-repeat center / cover;
+    width: 28.2rem;
+    min-width: 16rem;
   }
 }
+
 
 @media (max-width: 840px) {
   body {
@@ -80,14 +115,14 @@
     &__links {
       position: absolute;
       right: 0px;
-      height: 75.1vh;
-      top: 9.6vh;
+      height: 71.9vh;
+      top: 16.5vh;
       background-color: #E2211C;
       display: flex;
       flex-direction: column;
       width: 100%;
       align-items: center;
-      padding: 4rem 0;
+      padding: 3rem 0;
       transform: translateX(100%);
       transition: transform 0.5s ease-in;
     }
@@ -98,10 +133,43 @@
     }
   }
 
-  .burger {
-    display: block;
+  .hero {
+    margin: 13rem auto 5.281rem;
+    
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__subtitle {
+      font-size: 0.9rem;
+    }
   }
 
+}
+
+@media (max-width: 768px) {
+  .about {
+    &__title {
+      text-align: center;
+    }
+    &__image {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .hero {
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+
+  .about {
+    &__content {
+      padding: 5.44rem 1rem;
+    }
+  }
 }
 
 .navbar__links--active {

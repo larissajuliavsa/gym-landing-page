@@ -56,3 +56,14 @@ button {
 	border: none;
 	background-color: inherit;
 }
+
+.container {
+	width: 80%;
+	margin: 5.281rem auto;
+	// border: 1px solid black;
+
+	&--sm {
+		width: 90%;
+		margin: auto;
+	}
+}

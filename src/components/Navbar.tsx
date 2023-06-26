@@ -14,8 +14,8 @@ const Navbar = () => {
   
   console.log('🚀 ~ navbarActive:', navbarActive)
   return (
-    <header className='container'>
-      <nav className='navbar'>
+    <header className='navbar'>
+      <nav className='navbar__container'>
         <div>
           <a href='/' className='navbar__item--button logo'>
             <img alt="Whatsapp Button" src={logo} />            
