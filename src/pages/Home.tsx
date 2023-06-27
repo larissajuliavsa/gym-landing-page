@@ -1,5 +1,10 @@
 import Navbar from '../components/Navbar'
 
+import musculacao from '../assets/images/modalidade-musculacao.svg';
+import boxe from '../assets/images/modalidade-boxe.svg';
+import jiujitsu from '../assets/images/modalidade-jiujitsu.svg';
+import muaythai from '../assets/images/modalidade-muaythai.svg';
+
 function Home() {
   return (
     <>
@@ -29,8 +34,23 @@ function Home() {
         <div className='about__image'></div>
       </section>
 
-      <section>
-        <p>OI</p>
+      <section className='modalities container'>
+        <div>
+          <img alt="Modalidade musculação" src={musculacao} />
+          <p>Musculação</p>
+        </div>
+        <div>
+          <img alt="Modalidade boxe" src={boxe} />
+          <p>Boxe</p>
+        </div>
+        <div>
+          <img alt="Modalidade jiujitsu" src={jiujitsu} />
+          <p>Jiu Jitsu</p>
+        </div>
+        <div>
+          <img alt="Modalidade muaythai" src={muaythai} />
+          <p>Muay Thai</p>
+        </div>
       </section>
     </>
   )
