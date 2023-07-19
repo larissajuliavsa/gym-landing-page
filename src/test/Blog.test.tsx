@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 import {render, screen} from "@testing-library/react"
-import Blog from "../pages/Blog"
+import Blog from "../pages/Modalities"
 
 describe("Blog page", () => {
   test("Should have 'Blog' on page", () => {

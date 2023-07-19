@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import logo from '../assets/images/logo.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [navbarActive, setNavbarActive] = useState(false);
@@ -23,25 +24,25 @@ const Navbar = () => {
         </div>
         <ul className={`navbar__links ${navbarActive ? 'navbar__links--active' : ''}`}>
           <li className='navbar__item'>
-            <a>Gym</a>
+            <Link to='/'>Gym</Link>
           </li>
           <li className='navbar__item'>
-            <a>Modalidades</a>
+            <Link to='/modalities'>Modalidades</Link>
           </li>
           <li className='navbar__item'>
-            <a>Planos</a>
+            <Link to='/plans'>Planos</Link>
           </li>
           <li className='navbar__item'>
-            <a>Horários</a>
+            <Link to='/schedule'>Horários</Link>
           </li>
           <li className='navbar__item'>
-            <a>Professores</a>
+            <Link to='/instructors'>Professores</Link>
           </li>
           <li className='navbar__item'>
-            <a>Contato</a>
+            <Link to='/contact'>Contato</Link>
           </li>
 
-          <li className='button__primary active'>
+          <li className='button primary active'>
             <a href='/'>Faça sua matrícula</a>
           </li>
         </ul>

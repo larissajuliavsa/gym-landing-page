@@ -1,5 +1,7 @@
 @import './reset.scss';
 @import './components.scss';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 body {
@@ -18,20 +20,37 @@ h1, .h1 {
   line-height: 3.2rem;
 }
 
+h2, .h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.28rem;
+}
+
+.text--desc {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.21438rem;
+}
+
 .button {
-  &__primary {
-    color: #F8F8F8;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.08em;
+  line-height: 1.3rem;
+  color: #F8F8F8;
+
+  &.primary {
     background-color: #E2211C;
-    padding: 0.5rem 1rem;
-    width: fit-content;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 0.08em;
-    line-height: 1.3rem;
 
     &.active {
       border: 1px solid #F8F8F8;
     }
+  }
+
+  &.secondary {
+    background-color: #3C77B9;
   }
 }
 
@@ -48,6 +67,12 @@ h1, .h1 {
   }
 }
 
+.swiper-button-next, .swiper-button-prev {
+  color: #3C77B9;
+  // color: #F8F8F8;
+}
+
+
 @media (max-width: 840px) {
   // .container {
   //   width: 90%;
@@ -60,6 +85,11 @@ h1, .h1 {
 }
 
 @media (max-width: 425px) {
+
+  h1, .h1 {
+    font-size: 2rem;
+  }
+
   .button {
     &__primary {
       font-size: 0.8rem;
